@@ -111,11 +111,22 @@ function Airplane(name) {
           + Should return a string "Playing with x", x being the favorite toy.
   */
 
+//create a child object
 
- function Baby(name, age) {
-   Person.call(this, name, age);
+
+
+
+ function Baby(babyAttributes, age, favoriteToy) {
+   Person.call(this, babyAttributes, age, favoriteToy);
+    this.favoriteToy = Baby.favoriteToy;
   }
  
+  Baby.prototype = Object.create(Person.prototype);
+
+  Baby.prototype.play = function (){
+    return `Playing with ${this.favoriteToy}`;
+  }
+
   
   /* 
     TASK 4
