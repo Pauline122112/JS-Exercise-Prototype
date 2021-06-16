@@ -96,8 +96,10 @@ function Airplane(name) {
     this.odometer = 0;
   }
    
-  Car.prototype.fill = function(){
-    
+  Car.prototype.fill = function(gallons){
+    if(this.tank += 10){
+      this.tank === gallons;
+    }
   }
 
   
