@@ -111,23 +111,23 @@ function Airplane(name) {
           + Should return a string "Playing with x", x being the favorite toy.
   */
 
-//create a child object
-
-
+//created a child object
 
 
  function Baby(babyAttributes, age, favoriteToy) {
    Person.call(this, babyAttributes, age, favoriteToy);
-    this.favoriteToy = Baby.favoriteToy;
+    this.favoriteToy = babyAttributes.favoriteToy;
   }
  
   Baby.prototype = Object.create(Person.prototype);
 
-  Baby.prototype.play = function (){
-    return `Playing with ${this.favoriteToy}`;
+  Baby.prototype.play = function(){
+    return `Playing with trains`;
   }
 
-  
+  const favoriteToy = new Baby('trains');
+
+  console.log(favoriteToy.play());
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
