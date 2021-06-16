@@ -116,7 +116,7 @@ function Airplane(name) {
 
  function Baby(babyAttributes, age, favoriteToy) {
    Person.call(this, babyAttributes, age, favoriteToy);
-    this.favoriteToy = babyAttributes.favoriteToy;
+    this.favoriteToy = favoriteToy;
   }
  
   Baby.prototype = Object.create(Person.prototype);
@@ -124,6 +124,8 @@ function Airplane(name) {
   Baby.prototype.play = function(){
     return `Playing with trains`;
   }
+
+
 
   const favoriteToy = new Baby('trains');
 
