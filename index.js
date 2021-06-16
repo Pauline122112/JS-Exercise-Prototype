@@ -112,8 +112,8 @@ function Airplane(name) {
   */
 
 
- function Baby(attributes) {
-   Person.call(this, attributes);
+ function Baby(name, age) {
+   Person.call(this, name, age);
   }
  
   
